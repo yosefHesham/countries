@@ -13,7 +13,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Development',
       template: './src/index.html',
-
     }),
   ],
   output: {
