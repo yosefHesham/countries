@@ -46,10 +46,45 @@ button[type="submit"] {
     border: 1px solid transparent;
     border-radius: inherit;
     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
-    cursor: pointer;
+    cursor: pointers;
     opacity: 0.7;
 }
 
 button[type="submit"]:hover {
     opacity: 1;
+}
+
+.countries-wrapper {
+    padding: 5%;
+}
+
+.countries-section {
+    display: grid;
+    row-gap: 50px;
+    column-gap: 40px;
+    grid-template-columns:
+    repeat(
+        auto-fill,
+        minmax(200px, 1fr)
+        );
+        width: 100%;
+        margin-top: 15px;
+}
+
+.country {
+    min-height: fit-content;
+    max-width: 200px;
+    min-width: 150px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.country-image {
+    max-height: 40%;
+    min-height: 40%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

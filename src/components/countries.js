@@ -18,7 +18,7 @@ const renderCountries = async () => {
     );
   });
 
-  countries.appendChild(temp);
+  countries.innerHTML += temp.innerHTML;
 };
 
 export default renderCountries;

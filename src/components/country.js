@@ -1,7 +1,7 @@
 const buildCountry = (name, population, region, capital, flag) => {
   const country = document.createElement('article');
   country.classList.add('country');
-  country.innerHTML = `<img src=${flag} alt="name"/>
+  country.innerHTML = `<img src=${flag} alt="name" class="country-image"/>
     <h2> ${name} </h2>
     <p> Population: <span> ${population} </span> </p>
     <p> Region: <span> ${region} </span> </p>
