@@ -20,11 +20,16 @@
       <section class="search-section">
         <article class="search-bar">
           <button type="submit">Search</button>
-          <input type="search" placeholder="Search country" />
+          <input type="search" placeholder="Search for a country..." />
         </article>
 
-        <select title="Filter By Region">
-          <option>Filter By Region</option>
+        <select title="Filter By Region" class="select-filter">
+          <option value="" selected disabled>Filter by region</option>
+          <option value="africa" class="filter-option">Africa</option>
+          <option value="americas" class="filter-option">America</option>
+          <option value="asia" class="filter-option">Asia</option>
+          <option value="europe" class="filter-option">Europe</option>
+          <option value="oceania" class="filter-option">Oceania</option>
         </select>
       </section>
       <section class="countries-wrapper">

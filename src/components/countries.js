@@ -1,10 +1,10 @@
 import fetchCountries from '../modules/fetchCountries.js';
 import buildCountry from './country.js';
 
-const renderCountries = async () => {
-  const countryList = await fetchCountries('all');
-
+const renderCountries = async (segment = 'all') => {
+  const countryList = await fetchCountries(segment);
   const countries = document.querySelector('.countries-section');
+  countries.innerHTML = '';
   const temp = document.createElement('div');
   countryList.forEach((country) => {
     temp.appendChild(
