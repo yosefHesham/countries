@@ -1,4 +1,4 @@
-import renderCountries from '../components/countries';
+import renderCountries from '../components/countries.js';
 
 const configureSearch = () => {
   const form = document.querySelector('.search-bar');
