@@ -1,4 +1,4 @@
-import renderCountries from '../components/countries';
+import renderCountries from '../components/countries.js';
 
 const configureFilter = () => {
   const selectFilter = document.querySelector('.select-filter');

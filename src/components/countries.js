@@ -1,11 +1,19 @@
+import configureCountry from '../eventListeners/configureCountry.js';
 import fetchCountries from '../modules/fetchCountries.js';
 import buildCountry from './country.js';
 
+const countries = document.querySelector('.countries-section');
 const renderCountries = async (segment = 'all') => {
+  if (!countries) {
+    return;
+  }
   const countryList = await fetchCountries(segment);
-  const countries = document.querySelector('.countries-section');
   countries.innerHTML = '';
   const temp = document.createElement('div');
+  if (countryList.message) {
+    countries.innerHTML = '<p> No Search Results Found </p>';
+    return;
+  }
   countryList.forEach((country) => {
     temp.appendChild(
       buildCountry(
@@ -19,6 +27,7 @@ const renderCountries = async (segment = 'all') => {
   });
 
   countries.innerHTML += temp.innerHTML;
+  configureCountry();
 };
 
 export default renderCountries;

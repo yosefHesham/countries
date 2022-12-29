@@ -18,10 +18,15 @@
       </header>
 
       <section class="search-section">
-        <article class="search-bar">
-          <button type="submit">Search</button>
-          <input type="search" placeholder="Search for a country..." />
-        </article>
+        <form class="search-bar">
+          <button type="submit" class="search-button">Search</button>
+          <input
+            type="search"
+            placeholder="Search for a country..."
+            name="searchValue"
+            required
+          />
+        </form>
 
         <select title="Filter By Region" class="select-filter">
           <option value="" selected disabled>Filter by region</option>

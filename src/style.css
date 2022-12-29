@@ -1,4 +1,4 @@
-        /* stylelint-disable indentation */
+/* stylelint-disable indentation */
 .header {
     display: flex;
     width: 100%;
@@ -86,4 +86,31 @@ button[type="submit"]:hover {
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.country-info {
+    margin-left: 10%;
+}
+
+.country-details-image {
+    min-width: 30%;
+    max-width: 40%;
+    min-height: 30%;
+    max-height: 50%;
+    
+}
+
+.details-main {
+    margin-top: 10%;
+    display: flex;
+    column-gap: 10%;
+}
+
+.country-info-wrapper {
+    display: inline;
+}
+
+.borders {
+    display: flex;
+    column-gap: 10px;
 }
