@@ -1,14 +1,17 @@
 import renderCountries from './components/countries.js';
-import configureCountry from './eventListeners/configureCountry.js';
+import renderCountryDetails from './components/countryDetails.js';
 import configureFilter from './eventListeners/configureFilter.js';
 import configureSearch from './eventListeners/configureSearch.js';
 import './style.css';
 
 async function onRender() {
-  await renderCountries();
-  configureFilter();
-  configureSearch();
-  configureCountry();
+  if (window.location.pathname === '/') {
+    await renderCountries();
+    configureFilter();
+    configureSearch();
+  } else {
+    renderCountryDetails();
+  }
 }
 
 window.onload = onRender();
