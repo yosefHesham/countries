@@ -15,7 +15,9 @@ const renderCountryDetails = async () => {
     bordersTemp.appendChild(borderTemp);
   });
 
-  countryDetails.innerHTML = `<img src=${countryData.flag} alt="name" class="country-details-image"  />
+  countryDetails.innerHTML = `<img src=${
+    countryData.flag
+  } alt="name" class="country-details-image"  />
   
   
   <section class="country-info-wrapper">
@@ -36,7 +38,16 @@ const renderCountryDetails = async () => {
     
         ${bordersTemp.innerHTML}
         </article> 
+      
     </section>
+    <section class="domain">
+    <p> Top Level Domain: <span> ${countryData.topLevelDomain[0]} </span> </p>
+    <p> Currencies <span> ${countryData.currencies[0].name} </span> </p>
+    <p> Languages: ${countryData.languages.map(
+      (lang) => `<span> ${lang.name}  </span>`,
+    )}   </p>
+  
+  </section>
    </section>
   `;
 };

@@ -106,11 +106,22 @@ button[type="submit"]:hover {
     column-gap: 10%;
 }
 
+.details-main p {
+    white-space: nowrap;
+}
+
 .country-info-wrapper {
-    display: inline;
+    display: flex;
 }
 
 .borders {
     display: flex;
     column-gap: 10px;
 }
+
+.domain {
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+
