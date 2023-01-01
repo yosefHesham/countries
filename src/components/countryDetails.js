@@ -35,8 +35,8 @@ const renderCountryDetails = async () => {
     <p> Top Level Domain: <span> ${countryData.topLevelDomain[0]} </span> </p>
     <p> Currencies <span> ${countryData.currencies[0].name} </span> </p>
     <p> Languages: ${countryData.languages.map(
-      (lang) => `<span> ${lang.name}    </span>`,
-    )}   </p>
+    (lang) => `<span> ${lang.name}    </span>`,
+  )}   </p>
   
   </section>
    

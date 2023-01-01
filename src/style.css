@@ -7,13 +7,15 @@
 }
 
 header h1 {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .theme-mode {
     display: flex;
     column-gap: 5px;
-    margin-right: 10px;
+    margin-right: 20px;
+    align-items: center;
+    cursor: pointer;
 }
 
 .search-section {
@@ -39,6 +41,7 @@ input[type="search"] {
     padding: 7px 8px;
     font-size: 14px;
     color: inherit;
+    width: 100%;
     border: 1px solid transparent;
 }
 
@@ -115,7 +118,7 @@ button[type="submit"]:hover {
 .details-main {
     margin-top: 10%;
     display: flex;
-    column-gap: 5%;
+        justify-content: space-around;
 }
 
 .details-main p {
@@ -141,4 +144,60 @@ button[type="submit"]:hover {
 .domain {
     align-self: center;
     margin-bottom: 10px;
+}
+
+.dark {
+    background-color: hsl(207, 26%, 17%);
+    animation: darkmode;
+    animation-duration: 2s;
+}
+
+.white {
+    background-color: white;
+    animation: whitemode;
+    animation-duration: 2s;
+}
+
+.dark p,
+ .dark span, 
+ .dark h1, 
+ .dark h2 {
+    color: hsl(0, 0%, 100%);
+}
+
+.dark .search-bar {
+    background-color: white;
+}
+
+@media only screen and (max-width: 350px) {
+    .country-details-image {
+        min-width: 80%;
+    }
+    .details-main {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .country-wrapper {
+        flex-direction: column;
+        display: flex;
+    }
+    .country-info-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .domain {
+        align-self: flex-start;
+        margin-left: 18px;
+    }
+
+    .search-section {
+        flex-direction: column;
+        row-gap: 10px;
+        margin-left: 20%;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
 }
