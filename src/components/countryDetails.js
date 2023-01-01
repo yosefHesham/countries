@@ -4,13 +4,13 @@ const renderCountryDetails = async () => {
   const name = localStorage.getItem('name');
   const countryResp = await fetchCountries(`name/${name}`);
   const countryData = countryResp[0];
-  console.log(countryData);
   const countryDetails = document.querySelector('.details-main');
 
   const bordersTemp = document.createElement('div');
 
   countryData.borders.forEach((border) => {
     const borderTemp = document.createElement('p');
+    borderTemp.classList.add('border-country');
     borderTemp.innerHTML = `${border}`;
     bordersTemp.appendChild(borderTemp);
   });
@@ -18,8 +18,7 @@ const renderCountryDetails = async () => {
   countryDetails.innerHTML = `<img src=${
     countryData.flag
   } alt="name" class="country-details-image"  />
-  
-  
+  <section class="country-wrapper"> 
   <section class="country-info-wrapper">
     <section class="country-info"> 
     <h2> ${countryData.name} </h2>
@@ -31,23 +30,24 @@ const renderCountryDetails = async () => {
             <p> Capital : <span> ${countryData.capital} </span> </p>
 
          </article>
-
-        <article class="borders">
-        
-        <p> Border Countries:  </p>
-    
-        ${bordersTemp.innerHTML}
-        </article> 
-      
     </section>
     <section class="domain">
     <p> Top Level Domain: <span> ${countryData.topLevelDomain[0]} </span> </p>
     <p> Currencies <span> ${countryData.currencies[0].name} </span> </p>
     <p> Languages: ${countryData.languages.map(
-      (lang) => `<span> ${lang.name}  </span>`,
+      (lang) => `<span> ${lang.name}    </span>`,
     )}   </p>
   
   </section>
+   
+   </section>
+   <article class="borders">
+        
+   <p> Border Countries:  </p>
+
+   ${bordersTemp.innerHTML}
+   </article>   
+ 
    </section>
   `;
 };

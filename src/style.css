@@ -17,15 +17,20 @@ header h1 {
 }
 
 .search-section {
-    margin-top: 3%;
     display: flex;
     justify-content: space-between;
+    margin: 0 10%;
+    margin-top: 3%;
     margin-bottom: 5px;
 }
 
 .search-bar {
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-    border-radius: 10px;
+    border-radius: 8px;
+    height: 50px;
+    width: 350px;
+    display: flex;
+    align-items: center;
 }
 
 input[type="search"] {
@@ -35,6 +40,14 @@ input[type="search"] {
     font-size: 14px;
     color: inherit;
     border: 1px solid transparent;
+}
+
+.select-filter {
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+    border-radius: 8px;
+    width: 150px;
+    padding: 10px;
 }
 
 button[type="submit"] {
@@ -89,21 +102,20 @@ button[type="submit"]:hover {
 }
 
 .country-info {
-    margin-left: 10%;
+    margin-left: 20px;
 }
 
 .country-details-image {
     min-width: 30%;
     max-width: 40%;
-    min-height: 30%;
-    max-height: 50%;
-    
+    min-height: 200px;
+    max-height: 300px;
 }
 
 .details-main {
     margin-top: 10%;
     display: flex;
-    column-gap: 10%;
+    column-gap: 5%;
 }
 
 .details-main p {
@@ -112,16 +124,21 @@ button[type="submit"]:hover {
 
 .country-info-wrapper {
     display: flex;
+    column-gap: 20%;
 }
 
 .borders {
     display: flex;
     column-gap: 10px;
+    justify-content: end;
+}
+
+.border-country {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    padding: 2px 5px;
 }
 
 .domain {
     align-self: center;
     margin-bottom: 10px;
 }
-
-
